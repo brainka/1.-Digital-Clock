@@ -60,6 +60,8 @@ function runDigitalClock() {
 
 	if (getHour < 10) {
 		updateHour.innerText = `0${getHour}:`;
+	} else if (getHour == 10) {
+		updateHour.innerText = `${getHour}:`;
 	} else if (getHour == 11) {
 		updateHour.innerText = `${getHour}:`;
 	} else if (getHour == 12) {
@@ -85,11 +87,11 @@ function runDigitalClock() {
 	}
 
 	// update date with proper use of 'st' 'nd' and 'rd'
-	if (getDate == 1 || 21 || 31) {
+	if (getDate === (1 || 21 || 31)) {
 		updateOrdinalNum.innerText = 'st';
-	} else if (getDate == 2 || 22) {
+	} else if (getDate === (2 || 22)) {
 		updateOrdinalNum.innerText = 'nd';
-	} else if (getDate == 3 || 23) {
+	} else if (getDate === (3 || 23)) {
 		updateOrdinalNum.innerText = 'rd';
 	}
 }
