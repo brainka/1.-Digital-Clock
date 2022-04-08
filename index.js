@@ -57,7 +57,6 @@ function runDigitalClock() {
 	updateOrdinalNum.innerText = 'th';
 
 	// update to PM
-
 	if (getHour < 10) {
 		updateHour.innerText = `0${getHour}:`;
 	} else if (getHour == 10) {
